@@ -8,6 +8,7 @@ for %%i in (%var1%) do (
 	set var2=%%~xi
 )
 cls
+IF EXIST %var1%.exe del %var1%.exe -R
 IF %var2%==.cpp (
 	g++ -o %var1% %var1%.cpp & %var1%.exe
 )
